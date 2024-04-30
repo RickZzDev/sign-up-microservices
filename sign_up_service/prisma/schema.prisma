@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Game {
+  id   String @id
+  name String
+  age  Int
+}
+
+model Video {
+  id  String @id
+  url String
+}
+
+model User {
+  id    String @id
+  name  String
+  email String
+}
